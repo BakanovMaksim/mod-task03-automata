@@ -8,8 +8,8 @@ Automata::Automata()
     prices = new int[5];
     for (int index = 0; index < 5; index++)
     {
-        menu[i] = "Напиток " + std::to_string(i + 1);
-        prices[i] = 10 * (i + 1);
+        menu[index] = "Напиток " + std::to_string(index + 1);
+        prices[index] = 10 * (index + 1);
     }
     currentstate = OFF;
 }
@@ -42,7 +42,7 @@ std::string Automata::etMenu()
     std::string fullmenu;
     for (int index = 0; index < 5; index++)
     {
-        fullmenu += std::to_string(i + 1) + ". " + menu[i] + " - " + std::to_string(prices[i]) + "\n";
+        fullmenu += std::to_string(index + 1) + ". " + menu[index] + " - " + std::to_string(prices[index]) + "\n";
     }
 
     return fullmenu;
